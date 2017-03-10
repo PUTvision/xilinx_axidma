@@ -11,6 +11,10 @@
 #ifndef LIBAXIDMA_H_
 #define LIBAXIDMA_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * The struct representing an AXI DMA device.
  *
@@ -279,5 +283,9 @@ int axidma_video_transfer(axidma_dev_t dev, int display_channel, size_t width,
  * @param[in] channel DMA channel to stop the transfer on.
  **/
 void axidma_stop_transfer(axidma_dev_t dev, int channel);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* LIBAXIDMA_H_ */

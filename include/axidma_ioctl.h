@@ -14,6 +14,10 @@
 
 #include <asm/ioctl.h>              // IOCTL macros
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /*----------------------------------------------------------------------------
  * IOCTL Defintions
  *----------------------------------------------------------------------------*/
@@ -331,5 +335,9 @@ struct axidma_video_transaction {
  *  - user_addr - The user virtual address of the external DMA buffer.
  **/
 #define AXIDMA_UNREGISTER_BUFFER        _IO(AXIDMA_IOCTL_MAGIC, 9)
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* AXIDMA_IOCTL_H_ */
